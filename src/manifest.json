@@ -1,0 +1,12 @@
+{
+  "name": "ToggleCentaur",
+  "version_number": "1.0.0",
+  "website_url": "",
+  "description": "Enables toggling of the Arcana \"The Centaur\" in a savefile for speedruns that make use of the White Antler keepsake.",
+  "dependencies": [
+    "Hell2Modding-Hell2Modding-1.0.26",
+    "SGG_Modding-ModUtil-3.1.1",
+    "SGG_Modding-Chalk-2.0.2",
+    "SGG_Modding-ReLoad-1.0.1"
+  ]
+}
