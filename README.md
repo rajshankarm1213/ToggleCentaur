@@ -12,7 +12,6 @@ For primary use in speedrunning where some categories require it while others do
 - SGG_Modding-ModUtil-3.1.1
 - SGG_Modding-Chalk-2.0.2
 - SGG_Modding-ReLoad-1.0.1
-- 
 
 ## Releases
 
