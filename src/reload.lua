@@ -7,15 +7,19 @@
 
 
 function postfix_EquipMetaUpgrades()
+	
+	local metaUpgradeName = "MaxHealthPerRoom"
+	local metaUpgradeData = GameState.MetaUpgradeState[ metaUpgradeName ]
+	local metaUpgradeCardData = MetaUpgradeCardData[ metaUpgradeName ]
 	if config.toggleSwitch == false then
 		rom.log.debug("CentaurToggle is false, removing trait")
-		local metaUpgradeName = "MaxHealthPerRoom"
-		local metaUpgradeData = GameState.MetaUpgradeState[ metaUpgradeName ]
-		local metaUpgradeCardData = MetaUpgradeCardData[ metaUpgradeName ]
 		if metaUpgradeCardData and metaUpgradeData.Equipped and metaUpgradeCardData.TraitName and not metaUpgradeCardData.ActiveWhileDead then
 			RemoveWeaponTrait( metaUpgradeCardData.TraitName )
 		end
 		metaUpgradeData.Unlocked = false
 		metaUpgradeData.Equipped = false
+	else
+		metaUpgradeData.Unlocked = true
+		metaUpgradeData.Equipped = true
 	end
 end
