@@ -8,7 +8,9 @@
 --	values and functions later defined in `reload.lua`.
 
 
-modutil.mod.Path.Wrap("EquipMetaUpgrades", function ( hero, args )
-	EquipMetaUpgrades_override(hero, args)
+modutil.mod.Path.Wrap("EquipMetaUpgrades", function (base,...)
+	local rets = table.pack(base(...))
+	postfix_EquipMetaUpgrades()
+	return table.unpack(rets)
 end)
 
